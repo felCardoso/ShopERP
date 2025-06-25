@@ -64,14 +64,13 @@ class ProductWindow(QMainWindow):
         """Save or updates a product in the database."""
 
         name = self.ui.lineEditName.text().strip()
-        description = self.ui.lineEditDescription.text().strip()
-        price_text = self.ui.lineEditPrice.text().strip()
-        stock_text = self.ui.lineEditStock.text().strip()
+        description = self.ui.textEditDescription.toPlainText()
+        price_text = self.ui.doubleSpinBoxPrice.text().strip()
+        stock_text = self.ui.spinBoxStock.text().strip()
 
         if not name:
             QMessageBox.warning(self, "Invalid Input", "Product name cannot be blank!")
             return
-
         try:
             price = float(price_text.replace(",", "."))  # Also accepts comma as float
             stock = int(stock_text)
@@ -93,7 +92,7 @@ class ProductWindow(QMainWindow):
             QMessageBox.warning(self, "Validation Error", str(ve))
         except Exception as e:
             QMessageBox.critical(
-                self, "Saving Error", f"Could not save the product: {e}"
+                self, "Saving Error", f"Could not save the product\n\n{e}"
             )
 
     def load_products(self):
@@ -120,15 +119,15 @@ class ProductWindow(QMainWindow):
                 )
         except Exception as e:
             QMessageBox.critical(
-                self, "Loading Error", f"Could not load the products table: {e}"
+                self, "Loading Error", f"Could not load the products table\n\n{e}"
             )
 
     def clear_fields(self):
         """Clears the form input fields."""
         self.ui.lineEditName.clear()
-        self.ui.lineEditDescription.clear()
-        self.ui.lineEditPrice.clear()
-        self.ui.lineEditStock.clear()
+        self.ui.textEditDescription.clear()
+        self.ui.doubleSpinBoxPrice.clear()
+        self.ui.spinBoxStock.clear()
 
 
 # Screen Test

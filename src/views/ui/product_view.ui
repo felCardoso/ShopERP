@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>560</width>
-    <height>320</height>
+    <height>300</height>
    </rect>
   </property>
   <property name="font">
@@ -93,7 +93,7 @@
      <string>Description</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEditName">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -109,7 +109,7 @@
      </sizepolicy>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+   <widget class="QDoubleSpinBox" name="doubleSpinBoxPrice">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -125,7 +125,7 @@
      </sizepolicy>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="spinBoxStock">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -135,35 +135,12 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>120</y>
-      <width>230</width>
-      <height>120</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonCancel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>250</y>
-      <width>111</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cancel</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButtonSave">
     <property name="geometry">
      <rect>
-      <x>129</x>
+      <x>10</x>
       <y>250</y>
-      <width>111</width>
+      <width>230</width>
       <height>25</height>
      </rect>
     </property>
@@ -181,16 +158,16 @@
      </rect>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>560</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <widget class="QTextEdit" name="textEditDescription">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>125</y>
+      <width>230</width>
+      <height>115</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

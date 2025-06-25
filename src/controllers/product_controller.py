@@ -5,7 +5,7 @@ import sqlite3
 
 class ProductController:
     def __init__(self):
-        pass  # Por enquanto, não precisamos de nada aqui
+        pass
 
     def add_product(self, product: Product):
         """Add a new product to the database."""
@@ -20,11 +20,10 @@ class ProductController:
             conn.commit()
             return product
         except sqlite3.IntegrityError:
-            # Caso o nome do produto já exista (UNIQUE constraint)
-            raise ValueError(f"Produto com o nome '{product.name}' já existe.")
+            raise ValueError(f"Product named '{product.name}' already exists.")
         except Exception as e:
             conn.rollback()
-            raise Exception(f"Erro ao adicionar produto: {e}")
+            raise Exception(f"Error adding product: {e}")
         finally:
             conn.close()
 
